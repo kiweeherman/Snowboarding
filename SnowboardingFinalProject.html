@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snowboarding 🏂</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: rgb(192, 212, 233);
+        font-family: Alice Smile;
+        text-shadow: 5px 5px 10px rgba(24, 27, 126, 0.4);
+      }
+      h2 {
+        text-align: center;
+        line-height: 30px;
+        color: rgb(102, 156, 202);
+        font-family: Arial Rounded MT Bold;
+      }
+      h3 {
+        text-align: center;
+        line-height: 30px;
+        color: rgb(196, 216, 233);
+        font-family: Arial Rounded MT Bold;
+      }
+      p {
+        text-align: center;
+        font-family: Arial Rounded MT Bold;
+        color: rgb(30, 30, 105);
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 15px;
+        border-radius: 30px;
+        border: none;
+        background-color: rgb(33, 84, 168);
+        color: rgb(181, 181, 213);
+        transition: all 200ms ease-in-out;
+        box-shadow: 1px 10px 15px rgba(72, 56, 152, 0.3);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      button:hover {
+        background-color: rgb(192, 196, 223);
+        color: rgb(87, 87, 157);
+        border-style: initial;
+        border-color: rgb(30, 30, 105);
+        cursor: pointer;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        filter: brightness(95%) hue-rotate(338deg) saturate(116%);
+        transition: all 150ms ease-in-out;
+      }
+      .contained {
+        background-color: rgb(175, 200, 225);
+        margin: 0 auto;
+        padding: 15px;
+        border-radius: 30px;
+        width: 700px;
+      }
+      body {
+        background: radial-gradient(
+          circle at 12.3% 19.3%,
+          rgb(85, 88, 218) 0%,
+          rgb(95, 209, 249) 100.2%
+        );
+      }
+      img:hover {
+        transform: scale(1.1) rotate(2deg);
+      }
+      .imageGallery {
+        display: grid;
+        grid-template-columns: 600px;
+        grid-gap: 40px;
+        justify-content: center;
+      }
+      .dark {
+        background: linear-gradient(
+          109.6deg,
+          rgb(36, 45, 57) 11.2%,
+          rgb(16, 37, 60) 51.2%,
+          rgb(0, 0, 0) 98.6%
+        );
+      }
+      .dark .contained {
+        background-color: rgb(79, 104, 145);
+      }
+      .dark .darkerHeading {
+        color: aliceblue;
+      }
+      .dark button {
+        box-shadow: 10px 10px 20px rgba(3, 12, 34, 0.2);
+        background-color: aliceblue;
+        color: black;
+      }
+      .dark button:hover {
+        color: aliceblue;
+        background: radial-gradient(
+          circle at 12.3% 19.3%,
+          rgb(85, 88, 218) 0%,
+          rgb(95, 209, 249) 100.2%
+        );
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="nowChanging">Change Theme</button>
+    <h1 class="darkerHeading">Let's Talk About Snowboarding 🏂</h1>
+    <div class="contained">
+      <h2 class="darkerHeading">My Favorite Winter Sport</h2>
+      <br />
+      <div class="imageGallery">
+        <img
+          src="https://static01.nyt.com/images/2013/01/20/travel/20UPDATE_SPAN/20UPDATE_SPAN-superJumbo.jpg"
+        />
+        <img
+          src="https://s3.amazonaws.com/images.gearjunkie.com/uploads/2022/09/DSC5806.jpg"
+        />
+        <img
+          src="https://cdn.abicart.com/shop/images/193260846-origpic-61fb7e/ws88/48688/art88/h0846/Nitro-snowboard-optisym-2023-2.jpg"
+        />
+        <img
+          src="https://img.olympicchannel.com/images/image/private/t_social_share_thumb/f_auto/primary/jlxxfoash1xdb7cvbzw9"
+        />
+      </div>
+      <h2 class="darkerHeading">
+        I BEGAN LEARNING HOW TO SNOWBOARD <br />WHEN I WAS JUST 12 YEARS OLD!
+      </h2>
+      <p class="darkerHeading">
+        Yes, at just 12 years old I began snowboarding. <br />It's not uncommon
+        for people to start much younger either! <br />Snowboarding is a great
+        hobby, and I would definitely recommend <br />giving it a try if you can
+        handle the cold!
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Snowboarding" target="_blank">
+        <button>Learn More About Snowboarding!</button>
+      </a>
+    </div>
+    <h3>
+      Coded by
+      <a href="https://www.shecodes.io/graduates/79834-kailey-flores"
+        >Kailey Flores</a
+      >
+    </h3>
+    <script>
+      let button = document.querySelector(".nowChanging");
+      button.addEventListener("click", letsGoDarkBaby);
+
+      function letsGoDarkBaby() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+    </script>
+  </body>
+</html>
